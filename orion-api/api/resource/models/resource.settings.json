@@ -50,6 +50,10 @@
         "music",
         "comic"
       ]
+    },
+    "collections": {
+      "via": "resources",
+      "collection": "collection"
     }
   }
 }

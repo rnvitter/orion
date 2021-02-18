@@ -17,6 +17,10 @@
       "via": "categories",
       "collection": "resource",
       "dominant": true
+    },
+    "collections": {
+      "via": "categories",
+      "collection": "collection"
     }
   }
 }
