@@ -1,13 +1,18 @@
 <template>
-  <div class="flex py-2 mb-2">
-    <div class="flex-none font-extrabold text-lg">Orion</div>
-    <ul class="flex-grow flex justify-center space-x-2">
+  <div class="flex items-center py-2 mb-2">
+    <div class="flex-none font-extrabold text-lg uppercase">Orion</div>
+    <ul class="flex-grow flex space-x-1 mx-2">
       <nav-item
-        v-for="(route, index) in routes"
-        :key="index"
-        :href="route.href"
-        :isActive="$route.fullPath === route.href">
-        {{ route.name }}
+        href="/"
+        :isActive="$route.name === 'index'">
+        Home
+      </nav-item>
+      <nav-item
+        v-for="collection in collections"
+        :key="collection.id"
+        :href="collection.id.toString()"
+        :isActive="$route.params.collection === collection.id.toString()">
+        {{ collection.name }}
       </nav-item>
     </ul>
   </div>
@@ -16,12 +21,10 @@
 <script>
 export default {
   data: () => ({
-    routes: [
-      { name: 'Home', href: '/' },
-      { name: 'BLM', href: '/blm' },
-      { name: 'Green', href: '/green' }
+    collections: [
+      { id: 1, name: 'Black Lives Matter' },
+      { id: 2, name: 'Climate Change' }
     ]
   })
-
 }
 </script>

@@ -11,14 +11,13 @@
 
 <script>
 export default {
-  data(){
+  data () {
     return {
       categories: [],
       resources: []
     }
   },
   created: async function () {
-
     const categories = await fetch(`${process.env.apiUrl}/categories`)
     this.categories = await categories.json()
     const resources = await fetch(`${process.env.apiUrl}/resources`)

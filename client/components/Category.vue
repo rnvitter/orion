@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="my-2 text-lg font-extrabold">{{ category.name }}</div>
+    <div class="my-2 text-lg font-extrabold animate-fadeIn">{{ category.name }}</div>
     <div
-      class="flex flex-nowrap space-x-2 bg-rose-300 overflow-x-auto"
+      class="whitespace-no-wrap space-x-2 overflow-x-auto overflow-y-hidden"
       style="height: 220px;">
       <resource
         v-for="item in resources"

@@ -2,7 +2,7 @@
   <li>
     <a
       :href="href"
-      :class="[['block', 'px-4', 'py-2', 'rounded-lg', { 'bg-black text-white': isActive }]]"
+      :class="[['block', 'text-sm', 'mx-2', { 'border-b-2 border-black font-bold': isActive }]]"
     >
       <slot></slot>
     </a>

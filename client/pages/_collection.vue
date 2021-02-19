@@ -11,17 +11,14 @@
 
 <script>
 export default {
-  data(){
-    return {
-      categories: [],
-      resources: []
-    }
-  },
+  data: () => ({
+    categories: [],
+    resources: []
+  }),
   created: async function () {
-
-    const categories = await fetch(`${process.env.apiUrl}/categories`)
+    const categories = await fetch(`${process.env.apiUrl}/categories?collections_in=${this.$route.params.collection}`)
     this.categories = await categories.json()
-    const resources = await fetch(`${process.env.apiUrl}/resources`)
+    const resources = await fetch(`${process.env.apiUrl}/resources?collections_in=${this.$route.params.collection}`)
     this.resources = await resources.json()
   }
 }
