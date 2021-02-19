@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "title": {
       "type": "string"
     },
     "description": {
@@ -52,8 +52,11 @@
       ]
     },
     "collections": {
-      "via": "resources",
-      "collection": "collection"
+      "collection": "collection",
+      "via": "resources"
+    },
+    "subtitle": {
+      "type": "string"
     }
   }
 }

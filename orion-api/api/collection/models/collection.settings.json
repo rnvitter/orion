@@ -21,13 +21,13 @@
       "type": "text"
     },
     "categories": {
-      "collection": "category",
       "via": "collections",
+      "collection": "category",
       "dominant": true
     },
     "resources": {
-      "collection": "resource",
       "via": "collections",
+      "collection": "resource",
       "dominant": true
     }
   }
