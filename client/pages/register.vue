@@ -61,8 +61,8 @@
           </div>
         </form>
 
-        <div class="has-text-centered" style="margin-top: 20px">
-          Already got an account? <nuxt-link to="/login">Login</nuxt-link>
+        <div class="has-text-centered text-sm" style="margin-top: 20px">
+          Already got an account? <nuxt-link to="/login" :class="linkClasses">Log In</nuxt-link>
         </div>
       </div>
     </div>
@@ -97,6 +97,8 @@ export default {
     password: '',
     success: null,
     error: null,
+    // TODO: abstract these out to components?
+    linkClasses: 'inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800',
     inputClasses: 'appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
   })
 }

@@ -4,7 +4,7 @@
       <div class="relative flex items-center justify-between h-12">
         <div class="flex items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <div class="flex-none font-extrabold text-lg uppercase">Orion</div>
+            <a class="flex-none font-extrabold text-lg uppercase" href="/">Orion</a>
           </div>
         </div>
 

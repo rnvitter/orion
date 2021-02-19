@@ -41,18 +41,21 @@
               type="submit">
               Log In
             </button>
+            <nuxt-link
+              :class="linkClasses"
+              to="/forgot-password">
+              Forgot Password?
+            </nuxt-link>
             <!-- <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
               Forgot Password?
             </a> -->
           </div>
         </form>
 
-        <div class="has-text-centered" style="margin-top: 20px">
-          Don't have an account? <nuxt-link to="/register">Register</nuxt-link>
+        <div class="has-text-centered text-sm" style="margin-top: 20px">
+          Don't have an account? <nuxt-link to="/register" :class="linkClasses">Register</nuxt-link>
         </div>
-        <div class="has-text-centered" style="margin-top: 20px">
-          <nuxt-link to="/forgot-password">Forgot Password?</nuxt-link>
-        </div>
+
       </div>
     </div>
   </div>
@@ -84,6 +87,7 @@ export default {
     email: '',
     password: '',
     error: null,
+    linkClasses: 'inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800',
     inputClasses: 'appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
   })
 }

@@ -27,7 +27,7 @@
               New Password
             </label>
             <input
-              id="password"
+              id="password1"
               v-model="password1"
               :class="inputClasses"
               type="password"
@@ -39,7 +39,7 @@
               Confirm New Password
             </label>
             <input
-              id="password"
+              id="password2"
               v-model="password2"
               :class="inputClasses"
               type="password"
