@@ -18,10 +18,13 @@ export default {
     }
   },
   created: async function () {
-    const categories = await fetch(`${process.env.apiUrl}/categories`)
-    this.categories = await categories.json()
-    const resources = await fetch(`${process.env.apiUrl}/resources`)
-    this.resources = await resources.json()
+    this.$axios.get(`categories`).then((response) => {
+      this.categories = response.data
+    })
+
+    this.$axios.get(`resources`).then((response) => {
+      this.resources = response.data
+    })
   }
 }
 </script>

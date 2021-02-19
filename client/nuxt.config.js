@@ -34,7 +34,35 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
+
+  // Axios configuration
+  axios: {
+    baseURL: process.env.API_URL || 'http://localhost:1337'
+  },
+
+  // Strapi auth configuration
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'auth/local',
+            method: 'post',
+            propertyName: 'jwt'
+          },
+          user: {
+            url: 'users/me',
+            method: 'get',
+            propertyName: false
+          },
+          logout: false
+        }
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
